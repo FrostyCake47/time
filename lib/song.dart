@@ -13,10 +13,13 @@ class Song{
 class SongWidget extends StatelessWidget {
   final String name;
   final String imageUrl;
+  final String artist;
 
+  @override
   const SongWidget({
     Key? key,
     required this.name,
+    required this.artist,
     required this.imageUrl,
   }) : super(key: key);
 
@@ -25,14 +28,34 @@ class SongWidget extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(8.0),
       child: DefaultTextStyle(
-        style: TextStyle(color: Colors.grey[200]),
+        style: TextStyle(
+          color: Colors.grey[200],
+          letterSpacing: 0.3,
+        ),
+
         child: Row(
-          children: const [
-            Text("Image"),
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(5),
+              child: Image.network(
+                imageUrl,
+                width: 50.0,
+                height: 50.0,
+                fit: BoxFit.cover,
+              ),
+            ),
+
+            SizedBox(width: 10,),
+
             Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Song name"),
-                Text("Author name")
+                Text(name),
+                Text(
+                  artist,
+                  style: TextStyle(
+                    color: Colors.grey[500],
+                  ),)
               ],
             )
           ],
