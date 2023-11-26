@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'song.dart';
 
 void main() => runApp(const MaterialApp(
   home: Home(),
@@ -8,15 +9,25 @@ void main() => runApp(const MaterialApp(
 ));
 
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   const Home({super.key});
+
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  int level = 1;
+  List<Song> songs = [
+    Song(song: "i adore you", artist: "Nesaroo"),
+    Song(song: "Evermore", artist: "Hollow Coves"),
+    Song(song: "Won't Even know it", artist: "Avery Lynch"),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
         backgroundColor: Colors.grey[900],
-
         appBar: AppBar(
           title: Text(
             "Frosty Card",
@@ -71,7 +82,7 @@ class Home extends StatelessWidget {
                   ),
                   //SizedBox(height: 10,),
                   Text(
-                    "69",
+                    "$level",
                     style: TextStyle(
                       color: Colors.amber,
                       fontFamily: "Pacifico",
@@ -122,13 +133,26 @@ class Home extends StatelessWidget {
                       )
                     ],
                   ),
-                )
+                ),
+                Text(
+                  "aah",
+                  style: TextStyle(
+                    color: Colors.grey[200],
+                  ),)
               ]
             ),
           ),
         ),
 
-      
+
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            setState(() {
+              level += 1;
+            });
+          },
+          child: Icon(Icons.add,)
+        )
     );
   }
 }
