@@ -129,16 +129,18 @@ class _HomeState extends State<Home> {
                               color: Colors.grey[200]
                             )
                           ),
+                          
                         ],
+                      ),
+                      SizedBox(height: 20,),
+                      Row(
+                        children: [
+                          SongWidget(name: "i adore you", imageUrl: "idk")
+                        ]
                       )
                     ],
                   ),
                 ),
-                Text(
-                  "aah",
-                  style: TextStyle(
-                    color: Colors.grey[200],
-                  ),)
               ]
             ),
           ),
