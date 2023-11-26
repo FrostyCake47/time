@@ -27,11 +27,6 @@ class Home extends StatelessWidget {
           backgroundColor: Colors.grey[850],
           elevation: 0.0,
         ),
-      
-        /*body: Center(
-                child: Image.asset("assets/1.jpg"),
-                //child: Image.network("https://sallysbakingaddiction.com/wp-content/uploads/2017/06/moist-chocolate-cupcakes-5.jpg")
-        ),*/
 
         body: Padding(
           padding: EdgeInsets.symmetric(vertical: 30, horizontal: 20),
