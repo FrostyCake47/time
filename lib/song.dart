@@ -2,6 +2,13 @@
 
 import 'package:flutter/material.dart';
 
+class Song{
+  String song;
+  String artist;
+
+  Song({required this.song, required this.artist});
+}
+
 
 class SongWidget extends StatelessWidget {
   final String name;
@@ -18,8 +25,8 @@ class SongWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      margin: EdgeInsets.all(8.0),
+    return Container(
+      padding: EdgeInsets.all(8.0),
       child: DefaultTextStyle(
         style: TextStyle(
           color: Colors.grey[200],
