@@ -141,15 +141,16 @@ class _HomeState extends State<Home> {
                           color: Colors.grey[200]
                         )
                       ),
+
                       
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: songList.map((songs) => songs).toList()
-                      )
                     ],
                   ),
                   
                 ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: songList.map((songs) => songs).toList()
+                )
 
               ]
             ),
