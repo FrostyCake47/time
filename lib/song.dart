@@ -18,8 +18,8 @@ class SongWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(8.0),
+    return Card(
+      margin: EdgeInsets.all(8.0),
       child: DefaultTextStyle(
         style: TextStyle(
           color: Colors.grey[200],
