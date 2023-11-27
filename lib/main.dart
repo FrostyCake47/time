@@ -18,10 +18,11 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   int level = 1;
-  List<Song> songs = [
-    Song(song: "i adore you", artist: "Nesaroo"),
-    Song(song: "Evermore", artist: "Hollow Coves"),
-    Song(song: "Won't Even know it", artist: "Avery Lynch"),
+
+  List<Widget> songList = [
+    SongWidget(name: "i adore you", artist: "Nesaroo", imageUrl: "https://i.scdn.co/image/ab67616d00001e026b8a7a6490a995ad4b17b133"),
+    SongWidget(name: "Evermore", artist: "Hollow Coves", imageUrl: "https://i.scdn.co/image/ab67616d00001e0288fc5da00cc67a2a4b035618"),
+    SongWidget(name: "Won't even know it", artist: "Avery lynch", imageUrl: "https://i.scdn.co/image/ab67616d00001e02bcb83621f70f176f161295d4"),
   ];
 
   @override
@@ -140,17 +141,16 @@ class _HomeState extends State<Home> {
                           color: Colors.grey[200]
                         )
                       ),
-
+                      
                       Column(
-                        children: [
-                          SongWidget(name: "i adore you", artist: "Nesaroo", imageUrl: "https://i.scdn.co/image/ab67616d00001e026b8a7a6490a995ad4b17b133"),
-                          SongWidget(name: "Evermore", artist: "Hollow Coves", imageUrl: "https://i.scdn.co/image/ab67616d00001e0288fc5da00cc67a2a4b035618"),
-                          SongWidget(name: "Won't even know it", artist: "Avery lynch", imageUrl: "https://i.scdn.co/image/ab67616d00001e02bcb83621f70f176f161295d4"),
-                        ]
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: songList.map((songs) => songs).toList()
                       )
                     ],
                   ),
+                  
                 ),
+
               ]
             ),
           ),
