@@ -2,13 +2,6 @@
 
 import 'package:flutter/material.dart';
 
-class Song{
-  String song;
-  String artist;
-
-  Song({required this.song, required this.artist});
-}
-
 
 class SongWidget extends StatelessWidget {
   final String name;

@@ -18,11 +18,6 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   int level = 1;
-  List<Song> songs = [
-    Song(song: "i adore you", artist: "Nesaroo"),
-    Song(song: "Evermore", artist: "Hollow Coves"),
-    Song(song: "Won't Even know it", artist: "Avery Lynch"),
-  ];
 
   @override
   Widget build(BuildContext context) {
